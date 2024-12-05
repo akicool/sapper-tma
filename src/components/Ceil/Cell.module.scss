@@ -1,0 +1,18 @@
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+  border: 1px solid #fff;
+  background: "gray";
+  cursor: pointer;
+
+  &.hidden {
+    background: "gray";
+  }
+
+  &.shown {
+    background: #a1d0ad;
+  }
+}

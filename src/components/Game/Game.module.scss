@@ -1,0 +1,62 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  padding: 1rem;
+  background: #484747;
+
+  .info,
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .buttons {
+    width: 100%;
+
+    .button {
+      width: 100%;
+      max-width: 250px;
+      padding: 6px 16px;
+    }
+  }
+
+  .mobileButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+
+    .mobileButton {
+      background: "gray";
+      color: black;
+      font-size: 20px;
+      &.active {
+        border: 2px solid black;
+        background: "white";
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .game {
+    padding: 1rem 0.5rem;
+  }
+}
