@@ -64,6 +64,7 @@ export const Home = (_: Props) => {
       </div>
 
       <Board
+        start={start}
         initialGrid={initialGrid}
         setStart={setStart}
         setFlags={setFlags}

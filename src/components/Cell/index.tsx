@@ -12,6 +12,7 @@ export const Cell = memo(
     value,
     rowIndex,
     colIndex,
+    start,
     grid,
     setGrid,
     setFlags,
@@ -20,6 +21,7 @@ export const Cell = memo(
     value: TypeCell;
     rowIndex: number;
     colIndex: number;
+    start: boolean;
     grid: TypeCell[][];
     setGrid: (value: TypeCell[][]) => void;
     setFlags: (flags: number | ((prevFlag: number) => number)) => void;
@@ -48,7 +50,7 @@ export const Cell = memo(
           setIsHolding(true);
           setPreventClick(true);
 
-          if (!value.isRevealed) {
+          if (!value.isRevealed && start) {
             const newGrid = [...grid].map((row, rowIdx) =>
               row.map((cell, colIdx) => ({
                 ...cell,

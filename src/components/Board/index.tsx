@@ -8,9 +8,11 @@ import { useWinStore } from "../../store/win";
 import { useGridStore } from "../../store/initialGrid";
 
 export const Board = ({
+  start,
   setStart,
   setFlags,
 }: {
+  start: boolean;
   initialGrid: TypeCell[][];
   setStart: Dispatch<React.SetStateAction<boolean>>;
   setFlags: Dispatch<React.SetStateAction<number>>;
@@ -63,6 +65,7 @@ export const Board = ({
             value={value}
             rowIndex={rowIndex}
             colIndex={colIndex}
+            start={start}
             grid={grid}
             setGrid={setGrid}
             setFlags={setFlags}
