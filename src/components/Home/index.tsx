@@ -44,7 +44,7 @@ export const Home = (_: Props) => {
   ).padStart(2, "0")}`;
 
   return (
-    <div className="font-mono flex flex-col gap-3 relative h-dvh justify-center">
+    <div className="font-mono flex flex-col gap-3 relative h-svh justify-center">
       <a
         className="absolute m-1 left-0 top-0 text-red-600"
         href="https://github.com/akicool"
