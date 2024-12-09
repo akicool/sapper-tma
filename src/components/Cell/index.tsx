@@ -91,7 +91,7 @@ export const Cell = memo(
     return (
       <div
         className={clsx(
-          "size-7 border-solid border-2 flex justify-center items-center text-cyan-200 relative",
+          "size-8 border-solid border-2 flex justify-center items-center text-cyan-200 relative",
           value.isRevealed || "bg-gray-500",
           isBomb && "bg-red-500"
         )}
