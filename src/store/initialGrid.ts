@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { useGenerateCellValues } from "../hooks/useCellValue";
+import { useGenerateCellValues } from "../hooks/useGenerateCellValues";
 import { COLS, MINES, ROWS } from "../constants";
 import { TypeCell } from "../types/cell";
 
