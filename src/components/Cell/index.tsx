@@ -88,7 +88,16 @@ export const Cell = memo(
         preventClick &&
           cellHold.removeEventListener(HOLD_EVENT_TYPE.HOLD_END, handleHoldEnd);
       };
-    }, [isHolding, preventClick, value, rowIndex, colIndex, setGrid, setFlags]);
+    }, [
+      isHolding,
+      preventClick,
+      start,
+      value,
+      rowIndex,
+      colIndex,
+      setGrid,
+      setFlags,
+    ]);
 
     return (
       <div
