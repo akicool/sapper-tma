@@ -97,8 +97,15 @@ export const Cell = memo(
         )}
         ref={cellRef}
         onClick={() => {
-          if (isHolding || value?.isFlagged || preventClick) return;
-          if (useWinStore.getState().win !== "pending") return;
+          if (
+            isHolding ||
+            value?.isFlagged ||
+            preventClick ||
+            useWinStore.getState().win !== "pending"
+          ) {
+            return;
+          }
+
           if (value.cell === "mine") setIsBomb(true);
 
           handleCellClick(rowIndex, colIndex);
